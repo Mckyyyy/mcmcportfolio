@@ -9,7 +9,7 @@ export default function ProjectCard({ index, project }) {
   const { name, tagline, description, tags, status, href } = project;
   return (
     <article className="group relative flex h-full flex-col rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-neutral-600 hover:bg-neutral-900/80 sm:p-8">
-      <div className="mb-10 flex items-center justify-between gap-4">
+      <div className="mb-6 flex items-center justify-between gap-4 sm:mb-10">
         <span className="font-mono text-xs text-neutral-500">
           {String(index).padStart(2, '0')} / {status === 'Live' ? 'LIVE' : 'WIP'}
         </span>

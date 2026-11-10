@@ -26,7 +26,7 @@ export default function Speaking() {
             {topics.map((t, i) => (
               <li
                 key={t.title}
-                className="group flex items-baseline justify-between gap-6 border-t border-neutral-800 py-5 transition-colors last:border-b hover:border-neutral-600"
+                className="group flex flex-col gap-1.5 border-t border-neutral-800 py-5 transition-colors last:border-b hover:border-neutral-600 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
               >
                 <span className="flex items-baseline gap-4">
                   <span className="font-mono text-xs text-neutral-600 group-hover:text-emerald-400">
@@ -34,7 +34,7 @@ export default function Speaking() {
                   </span>
                   <span className="text-lg font-medium text-white">{t.title}</span>
                 </span>
-                <span className="shrink-0 font-mono text-xs text-neutral-500">{t.meta}</span>
+                <span className="shrink-0 pl-[1.95rem] font-mono text-xs text-neutral-500 sm:pl-0">{t.meta}</span>
               </li>
             ))}
           </ul>

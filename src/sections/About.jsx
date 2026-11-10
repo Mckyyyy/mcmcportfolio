@@ -9,7 +9,7 @@ export default function About() {
       <Reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 md:py-32">
         <SectionHeader number="05" label="About" title="A little signal. None of the noise." />
 
-        <div className="grid gap-12 lg:grid-cols-12">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <img
               src={profile.aboutImage}
