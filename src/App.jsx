@@ -9,6 +9,7 @@ import About from './sections/About.jsx';
 import Footer from './sections/Footer.jsx';
 import Modal from './components/Modal.jsx';
 import PdfViewer from './components/PdfViewer.jsx';
+import ScrollTopButton from './components/ScrollTopButton.jsx';
 import { profile } from './data.js';
 
 export default function App() {
@@ -46,6 +47,7 @@ export default function App() {
         <About />
       </main>
       <Footer />
+      <ScrollTopButton />
 
       <Modal open={projectsModal} onClose={closeModal} title="Currently working">
         <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-amber-400/40 bg-amber-400/10">

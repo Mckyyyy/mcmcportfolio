@@ -10,7 +10,7 @@ const topics = [
 export default function Speaking() {
   return (
     <section id="speaking" className="border-t border-neutral-800">
-      <Reveal className="mx-auto max-w-6xl px-4 py-24 sm:px-6 md:py-32">
+      <Reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 md:py-32">
         <SectionHeader number="04" label="Beyond the keyboard" title="From the terminal to the room." />
 
         <div className="grid gap-12 lg:grid-cols-12">

@@ -15,11 +15,6 @@ export default function Header() {
     return () => window.removeEventListener('resize', close);
   }, []);
 
-  const linkClass = (id) =>
-    `relative font-mono text-sm transition-colors ${
-      active === id ? 'text-white' : 'text-neutral-500 hover:text-neutral-200'
-    }`;
-
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-800 bg-slate-950/80 backdrop-blur-md">
       <a
@@ -63,7 +58,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setOpen((o) => !o)}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-800 text-neutral-300 transition-colors hover:border-neutral-600 hover:text-white md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-800 text-neutral-300 transition-colors hover:border-neutral-600 hover:text-white md:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? 'Close menu' : 'Open menu'}
@@ -81,23 +76,42 @@ export default function Header() {
         </div>
       </div>
 
-      {open && (
-        <nav id="mobile-nav" aria-label="Mobile" className="border-t border-neutral-800 px-4 pb-6 pt-4 md:hidden">
-          <ul className="flex flex-col gap-4">
+      {/* Mobile menu: slides open smoothly with large, thumb-friendly links */}
+      <div
+        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out md:hidden ${
+          open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+        }`}
+      >
+        <nav id="mobile-nav" aria-label="Mobile" inert={open ? undefined : ''} className="overflow-hidden">
+          <ul className="flex flex-col gap-1 border-t border-neutral-800 px-4 pb-4 pt-4">
             {navLinks.map(({ id, label }, i) => (
-              <li key={id}>
-                <a href={`#${id}`} onClick={() => setOpen(false)} className={linkClass(id)}>
-                  <span className="mr-3 text-neutral-600">{String(i + 1).padStart(2, '0')}</span>
+              <li
+                key={id}
+                style={{ transitionDelay: open ? `${60 + i * 45}ms` : '0ms' }}
+                className={`transition-all duration-300 ${open ? 'translate-x-0 opacity-100' : '-translate-x-3 opacity-0'}`}
+              >
+                <a
+                  href={`#${id}`}
+                  onClick={() => setOpen(false)}
+                  aria-current={active === id ? 'true' : undefined}
+                  className={`flex items-center rounded-xl px-4 py-3 font-mono text-base transition-colors active:bg-white/10 ${
+                    active === id
+                      ? 'bg-emerald-400/10 text-white ring-1 ring-emerald-400/40'
+                      : 'text-neutral-400 hover:bg-white/5 hover:text-white'
+                  }`}
+                >
+                  <span className="mr-4 text-xs text-emerald-400/70">{String(i + 1).padStart(2, '0')}</span>
                   {label}
+                  <span aria-hidden="true" className="ml-auto text-neutral-600">→</span>
                 </a>
               </li>
             ))}
           </ul>
-          <div className="mt-6 sm:hidden">
+          <div className="px-4 pb-6 sm:hidden">
             <StatusPill>{profile.status}</StatusPill>
           </div>
         </nav>
-      )}
+      </div>
     </header>
   );
 }

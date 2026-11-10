@@ -41,7 +41,7 @@ function CodeBlock() {
 export default function Approach() {
   return (
     <section id="approach" className="border-t border-neutral-800">
-      <Reveal className="mx-auto max-w-6xl px-4 py-24 sm:px-6 md:py-32">
+      <Reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 md:py-32">
         <SectionHeader number="01" label="The approach" title="Good systems. Better conversations." />
 
         <div className="grid gap-12 lg:grid-cols-12">

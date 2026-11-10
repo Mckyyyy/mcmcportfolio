@@ -6,7 +6,7 @@ import Reveal from '../components/Reveal.jsx';
 export default function About() {
   return (
     <section id="about" className="border-t border-neutral-800">
-      <Reveal className="mx-auto max-w-6xl px-4 py-24 sm:px-6 md:py-32">
+      <Reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 md:py-32">
         <SectionHeader number="05" label="About" title="A little signal. None of the noise." />
 
         <div className="grid gap-12 lg:grid-cols-12">

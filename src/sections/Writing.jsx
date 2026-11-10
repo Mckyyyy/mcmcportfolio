@@ -6,7 +6,7 @@ import Reveal from '../components/Reveal.jsx';
 export default function Writing() {
   return (
     <section id="writing" className="border-t border-neutral-800">
-      <Reveal className="mx-auto max-w-6xl px-4 py-24 sm:px-6 md:py-32">
+      <Reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 md:py-32">
         <SectionHeader
           number="02"
           label="Field notes"
