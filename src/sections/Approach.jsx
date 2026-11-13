@@ -42,20 +42,15 @@ export default function Approach() {
   return (
     <section id="approach" className="border-t border-neutral-800">
       <Reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 md:py-32">
-        <SectionHeader number="01" label="The approach" title="Good systems. Better conversations." />
+        <SectionHeader number="01" label="How I work" title="Build. Learn. Share." />
 
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="space-y-6 text-lg leading-relaxed lg:col-span-6">
             <p>
-              I'm Mc, a web developer who cares about the details that make a site feel right — clean layouts, fast
-              pages, and interfaces that just make sense.
-            </p>
-            <p>
-              I believe the best way to understand something is to build it, and the next best way is to explain it.
-              That's why I learn in public and share what I make.
+              I focus on clear layouts, fast pages, and interfaces that make sense. Building and sharing projects is how I learn.
             </p>
             <div className="flex flex-wrap gap-6 pt-2">
-              <ArrowLink href="#about">A little more about me</ArrowLink>
+              <ArrowLink href="#about">About me</ArrowLink>
               <ArrowLink href={profile.resume} external>
                 View my CV
               </ArrowLink>
@@ -67,7 +62,7 @@ export default function Approach() {
         </div>
 
         <div className="mt-16 border-t border-neutral-800 pt-10">
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">My everyday toolkit</p>
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Tools I use</p>
           <ul className="flex flex-wrap gap-2.5">
             {toolkit.map((t) => (
               <li key={t}>

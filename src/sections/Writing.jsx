@@ -10,7 +10,7 @@ export default function Writing() {
         <SectionHeader
           number="02"
           label="Field notes"
-          title="Thinking out loud."
+          title="Notes on my projects."
           link={{ href: '#writing', label: 'All writing' }}
         />
         <div>

@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section id="about" className="border-t border-neutral-800">
       <Reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 md:py-32">
-        <SectionHeader number="05" label="About" title="A little signal. None of the noise." />
+        <SectionHeader number="05" label="About" title="A bit about me." />
 
         <div className="grid gap-8 sm:gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -21,11 +21,7 @@ export default function About() {
 
           <div className="space-y-6 text-lg leading-relaxed lg:col-span-8">
             <p className="text-xl text-white sm:text-2xl">
-              I'm Mc Chielo Reambonanza — a web developer who loves building creative, user-friendly websites.
-            </p>
-            <p>
-              I'm studying at Northeastern Mindanao Colleges, working with HTML, CSS, JavaScript, Material UI, React,
-              PHP and MySQL. If you'd like to work together or just have a question, I'd love to hear from you.
+              I study at Northeastern Mindanao Colleges and welcome project inquiries.
             </p>
 
             <ul className="grid gap-px overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-800 sm:grid-cols-3">

@@ -7,9 +7,8 @@ export const profile = {
   firstName: 'MC CHIELO',
   lastName: 'REAMBONANZA.',
   logo: 'mc_',
-  role: 'Web developer & lifelong learner',
-  tags: ['Frontend', 'Backend', 'Design'],
-  bio: "I build clean, responsive websites that people actually enjoy using. I'm currently studying at Northeastern Mindanao Colleges and sharpening my craft one project at a time.",
+  role: 'Web developer',
+  bio: 'I build responsive websites and web apps with clear, user-friendly interfaces.',
   email: 'besasmcmc@gmail.com',
   resume: '/files/MCMCRESUME.pdf',
   heroImage: '/images/mcmc.png',
@@ -33,7 +32,7 @@ export const socials = [
   // { label: 'GitHub', href: 'https://github.com/your-username' },
 ];
 
-export const currentlyInto = ['React & Tailwind', 'PHP & MySQL', 'UI design'];
+export const currentlyInto = ['UI design'];
 
 export const toolkit = [
   'HTML5',
@@ -53,8 +52,7 @@ export const articles = [
   {
     tags: ['CSS', 'Layout'],
     title: 'Responsive layouts without the headache',
-    excerpt:
-      'Flexbox for one direction, Grid for two. A practical way to stop fighting your layout and start designing for every screen size.',
+    excerpt: 'Use Flexbox for one-dimensional layouts and Grid for two. Start mobile-first, then adapt to larger screens.',
     date: 'Oct 28, 2026',
     readTime: '5 min read',
     href: '#',
@@ -62,8 +60,7 @@ export const articles = [
   {
     tags: ['React', 'Learning'],
     title: 'What moving from HTML to React taught me',
-    excerpt:
-      'Components, props, and state finally clicked when I rebuilt an old project. Notes on thinking in reusable pieces.',
+    excerpt: 'Rebuilding an old project made components, props, and state click—and showed me how to think in reusable pieces.',
     date: 'Oct 09, 2026',
     readTime: '7 min read',
     href: '#',
@@ -71,65 +68,83 @@ export const articles = [
   {
     tags: ['PHP', 'Backend'],
     title: 'Sending email from a contact form, safely',
-    excerpt:
-      'Validating input, keeping credentials out of your code, and why environment variables matter even on small projects.',
+    excerpt: 'Validate input and keep credentials out of source code—even for small projects.',
     date: 'Sep 15, 2026',
     readTime: '6 min read',
     href: '#',
   },
 ];
 
-// TODO: replace with your real projects and links.
 export const projects = [
   {
-    name: 'portfolio',
-    tagline: 'Built in the open.',
+    name: 'NEMCO Online Documents Request System',
+    category: 'Undergraduate thesis',
     description:
-      'This site. A single-page portfolio built with React and Tailwind CSS — dark, minimal, and fully responsive.',
-    tags: ['React', 'Tailwind CSS', 'Vite'],
-    status: 'Live',
-    href: '#',
+      'Fourth-year thesis project to streamline academic document requests through the NEMCO registrar.',
+    tags: ['PHP', 'MySQL'],
+    repository: 'https://github.com/Mckyyyy/ODRS-NEMCO',
+    icon: 'documents',
+    featured: true,
   },
   {
-    name: 'mailbox',
-    tagline: 'Messages, delivered.',
+    name: 'SNSU Integrated Campus Management System',
+    category: 'Collaborative thesis · Local client',
     description:
-      'A PHP contact-form handler using PHPMailer and SMTP, with server-side validation and friendly error states.',
-    tags: ['PHP', 'PHPMailer'],
-    status: 'Currently working',
-    href: '#',
-  },
-  {
-    name: 'inventory',
-    tagline: 'Know what you have.',
-    description:
-      'A simple inventory dashboard for small shops — add, track, and search stock backed by a MySQL database.',
+      'A campus concern-management system developed for a local client with two teammates.',
     tags: ['PHP', 'MySQL', 'JavaScript'],
-    status: 'Currently working',
-    href: '#',
+    repository: 'https://github.com/Mckyyyy/snsu-icms',
+    icon: 'campus',
   },
   {
-    name: 'studio',
-    tagline: 'Design meets code.',
+    name: 'Personal To-Do List Web Application',
+    category: 'On-the-job training',
     description:
-      'A collection of UI experiments and graphic design pieces, translated from Figma mockups into working components.',
-    tags: ['Figma', 'CSS', 'Material UI'],
-    status: 'Currently working',
-    href: '#',
+      'Built during OJT to track assigned tasks and see which responsibilities were complete or pending.',
+    tags: ['React', 'Vite'],
+    repository: 'https://github.com/Mckyyyy/todo-app',
+    icon: 'checklist',
+  },
+  {
+    name: 'PHP Raffle Draw System',
+    category: 'Workplace system',
+    description:
+      'Created for workplace raffle activities to simplify participant management and winner selection.',
+    tags: ['PHP', 'MySQL'],
+    repository: 'https://github.com/Mckyyyy/Raffle-Draw-PHP-WAMPSERVER',
+    icon: 'raffle',
+  },
+  {
+    name: 'Modern Raffle Draw System',
+    category: 'Workplace · Full-stack',
+    description:
+      'A modern full-stack rebuild of my earlier raffle application, with a React frontend and Express backend.',
+    tags: ['React', 'Express.js', 'Node.js', 'MySQL'],
+    repository: 'https://github.com/Mckyyyy/Raffle-Draw-System',
+    icon: 'draw',
+    featured: true,
+  },
+  {
+    name: 'Messenger Chat Archiver',
+    category: 'Personal · Chrome extension',
+    description:
+      'A private extension that automates archiving Messenger conversations and avoids repetitive manual work.',
+    tags: [],
+    icon: 'archive',
+    private: true,
   },
 ];
 
 export const services = [
   {
     title: 'Web Development',
-    body: 'Modern, responsive websites tailored to your goals — fast, accessible, and easy to maintain.',
+    body: 'Responsive, accessible websites that are easy to maintain.',
   },
   {
     title: 'Graphic Design',
-    body: 'Visuals that communicate your brand clearly, from social graphics to full page layouts.',
+    body: 'Clear brand visuals, from social graphics to page layouts.',
   },
   {
     title: 'Full-stack Builds',
-    body: 'Dynamic web apps with PHP, React, JavaScript and MySQL — from database to interface.',
+    body: 'Web apps built from database to interface.',
   },
 ];

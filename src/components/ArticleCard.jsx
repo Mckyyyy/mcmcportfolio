@@ -1,3 +1,5 @@
+import TechBadge from './TechBadge.jsx';
+
 export default function ArticleCard({ index, article }) {
   const { tags, title, excerpt, date, readTime, href } = article;
   return (
@@ -10,9 +12,9 @@ export default function ArticleCard({ index, article }) {
         <div className="md:col-span-8">
           <div className="mb-3 flex flex-wrap gap-3">
             {tags.map((tag) => (
-              <span key={tag} className="font-mono text-[11px] uppercase tracking-wider text-neutral-500">
-                #{tag}
-              </span>
+              <TechBadge key={tag} size="sm">
+                {tag}
+              </TechBadge>
             ))}
           </div>
           <h3 className="mb-2 text-xl font-semibold text-white transition-colors group-hover:text-emerald-300 sm:text-2xl">

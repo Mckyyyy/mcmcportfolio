@@ -9,13 +9,16 @@ export default function Projects() {
       <Reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 md:py-32">
         <SectionHeader
           number="03"
-          label="Currently working on"
-          title="Less talk. More commits."
-          link={{ href: '#projects', label: 'All projects' }}
+          label="Selected work"
+          title="Projects built through experience."
         />
-        <div className="grid gap-5 md:grid-cols-2">
-          {projects.map((p, i) => (
-            <ProjectCard key={p.name} index={i + 1} project={p} />
+        <p className="mb-10 max-w-2xl leading-relaxed">
+          From thesis and OJT work to workplace systems and personal tools.
+        </p>
+
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <ProjectCard key={project.name} project={project} />
           ))}
         </div>
       </Reveal>

@@ -11,15 +11,11 @@ export default function Speaking() {
   return (
     <section id="speaking" className="border-t border-neutral-800">
       <Reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 md:py-32">
-        <SectionHeader number="04" label="Beyond the keyboard" title="From the terminal to the room." />
+        <SectionHeader number="04" label="Speaking" title="Practical ideas, shared simply." />
 
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="space-y-6 text-lg leading-relaxed lg:col-span-5">
-            <p>
-              I like talking about the things I wrestle with in real projects — layout, design decisions, and making
-              the web approachable for people just starting out.
-            </p>
-            <p>No magic frameworks. Just useful ideas, honest trade-offs, and a conversation worth having.</p>
+            <p>I share practical lessons on layout, design, and making the web approachable for beginners.</p>
           </div>
 
           <ul className="lg:col-span-7">

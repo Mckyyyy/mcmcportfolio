@@ -15,11 +15,6 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-12 md:pt-20 lg:grid-cols-12 lg:gap-10 lg:pb-24">
         {/* Left: copy */}
         <div className="@container min-w-0 lg:col-span-7">
-          <p className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-xs uppercase tracking-[0.2em]">
-            <span className="text-emerald-400">● Building in the open</span>
-            <span className="text-neutral-600">{profile.tags.join(' / ')}</span>
-          </p>
-
           <p className="mb-3 font-mono text-sm text-neutral-400">{profile.role}</p>
 
           {/* Sized to the column width (cqw) so the full name always fits beside the photo */}
