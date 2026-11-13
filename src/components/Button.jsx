@@ -7,9 +7,19 @@ const variants = {
 };
 
 export default function Button({ href, children, variant = 'primary', ...rest }) {
+  const className = `${base} ${variants[variant]}`;
+
+  if (href) {
+    return (
+      <a href={href} className={className} {...rest}>
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <a href={href} className={`${base} ${variants[variant]}`} {...rest}>
+    <button type="button" className={className} {...rest}>
       {children}
-    </a>
+    </button>
   );
 }

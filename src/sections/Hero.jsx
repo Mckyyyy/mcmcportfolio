@@ -1,4 +1,4 @@
-import { profile, socials, currentlyInto } from '../data.js';
+import { profile, currentlyInto } from '../data.js';
 import Button from '../components/Button.jsx';
 import TechBadge from '../components/TechBadge.jsx';
 import TypedName from '../components/TypedName.jsx';
@@ -53,29 +53,12 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom strip: connect + currently into */}
+      {/* Bottom strip: current interests */}
       <div className="relative border-t border-neutral-800">
-        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-8 sm:px-6 md:grid-cols-2">
+        <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
           <div>
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Connect</p>
-            <ul className="flex flex-wrap gap-2">
-              {socials.map((s) => (
-                <li key={s.label}>
-                  <a
-                    href={s.href}
-                    target={s.href.startsWith('http') ? '_blank' : undefined}
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-full border border-neutral-800 px-3.5 py-1.5 font-mono text-xs text-neutral-300 transition-colors hover:border-emerald-500/50 hover:text-white"
-                  >
-                    {s.label} <span aria-hidden="true">↗</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="md:text-right">
             <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Currently into</p>
-            <ul className="flex flex-wrap gap-2 md:justify-end">
+            <ul className="flex flex-wrap gap-2">
               {currentlyInto.map((t) => (
                 <li key={t}>
                   <TechBadge>{t}</TechBadge>

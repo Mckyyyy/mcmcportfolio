@@ -32,7 +32,7 @@ export const socials = [
   // { label: 'GitHub', href: 'https://github.com/your-username' },
 ];
 
-export const currentlyInto = ['UI design'];
+export const currentlyInto = ['UI design', 'Web development'];
 
 export const toolkit = [
   'HTML5',

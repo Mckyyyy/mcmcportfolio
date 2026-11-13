@@ -22,25 +22,36 @@ export default function Modal({ open, onClose, title, children }) {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" role="presentation">
-      <div className="absolute inset-0 bg-slate-950/70 backdrop-blur-sm animate-[fadeIn_.2s_ease]" onClick={onClose} />
+      <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-md animate-[fadeIn_.2s_ease]" onClick={onClose} />
       <div
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
-        className="relative w-full max-w-sm rounded-2xl border border-neutral-800 bg-neutral-950 p-8 text-center shadow-2xl shadow-emerald-500/10 animate-[popIn_.25s_ease]"
+        className="relative w-full max-w-md overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-950 p-6 text-left shadow-2xl shadow-emerald-500/10 animate-[popIn_.25s_ease] sm:p-8"
       >
-        {children}
-        <h2 id="modal-title" className="mb-6 text-2xl font-bold tracking-tight text-white">
-          {title}
-        </h2>
-        <button
-          ref={closeRef}
-          type="button"
-          onClick={onClose}
-          className="inline-flex items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-slate-950 transition-colors hover:bg-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
-        >
-          Got it
-        </button>
+        <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-20 h-52 w-52 rounded-full bg-emerald-400/[0.07] blur-3xl" />
+        <div className="relative">
+          <div className="mb-6 flex items-start justify-between gap-4">
+            <div>
+              <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.2em] text-emerald-400">// LET'S TALK</p>
+              <h2 id="modal-title" className="text-3xl font-bold tracking-tight text-white">
+                {title}
+              </h2>
+            </div>
+            <button
+              ref={closeRef}
+              type="button"
+              onClick={onClose}
+              aria-label="Close dialog"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-800 text-neutral-400 transition-colors hover:border-neutral-600 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+                <path d="m6 6 12 12M18 6 6 18" />
+              </svg>
+            </button>
+          </div>
+          {children}
+        </div>
       </div>
     </div>
   );
