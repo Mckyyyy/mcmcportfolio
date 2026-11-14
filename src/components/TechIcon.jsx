@@ -11,6 +11,8 @@ const iconStyles = {
   'node.js': { color: '#68a063', shape: 'hex', label: 'JS' },
   git: { color: '#f05032', shape: 'git' },
   figma: { color: '#f24e1e', shape: 'figma' },
+  canva: { color: '#00c4cc', shape: 'text', label: 'C' },
+  photoshop: { color: '#31a8ff', shape: 'text', label: 'Ps' },
   vite: { color: '#bd34fe', shape: 'bolt' },
   phpmailer: { color: '#9aa9ff', shape: 'mail' },
   'ui design': { color: '#f472b6', shape: 'design' },
@@ -57,6 +59,8 @@ function IconShape({ shape, label }) {
       );
     case 'letter':
       return <path d="M4 20V4h3.5l4.5 7 4.5-7H20v16h-3V9l-5 7-5-7v11H4Z" fill="currentColor" />;
+    case 'text':
+      return <text x="12" y="16" fill="currentColor" fontSize="9.5" fontWeight="800" textAnchor="middle">{label}</text>;
     case 'monogram':
       return <text x="12" y="16" fill="currentColor" fontSize="10" fontWeight="800" textAnchor="middle">{label}</text>;
     case 'waves':
@@ -115,6 +119,21 @@ function IconShape({ shape, label }) {
         <>
           <path d="m14 4 6 6-10.5 10.5H3.5v-6L14 4Z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
           <path d="m12 6 6 6" stroke="currentColor" strokeWidth="1.8" />
+        </>
+      );
+    case 'canva':
+      return (
+        <>
+          <rect x="2.5" y="2.5" width="19" height="19" rx="6" fill="currentColor" />
+          <path d="M15.2 7.8c-1.7-1.6-4.5-1.6-6.2 0-.8.7-1.3 1.8-1.3 2.9 0 1.1.4 2.1 1.2 2.9.8.7 1.8 1.1 3 1.1h.7v2.3h-2.3v1.7h4.1v-4.4c1.4-.4 2.5-1.5 2.5-3.1 0-1.1-.5-2.1-1.3-2.9Z" fill="#fff" opacity="0.98" />
+        </>
+      );
+    case 'photoshop':
+      return (
+        <>
+          <path d="M12 2.2 20 6.5v11.1l-8 4.2-8-4.2V6.5l8-4.3Z" fill="currentColor" />
+          <path d="M10.2 8.2h2.5c2.2 0 3.8 1.2 3.8 3.1 0 1.9-1.6 3.2-3.8 3.2h-1.1v2.2H10.2V8.2Zm2.5 4.5c1.1 0 1.8-.6 1.8-1.6 0-1-.7-1.6-1.8-1.6h-.8v3.2h.8Z" fill="#fff" />
+          <path d="M16.3 8.2h1.8v8.7h-1.8z" fill="#fff" />
         </>
       );
     default:

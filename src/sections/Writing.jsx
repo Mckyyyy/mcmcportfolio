@@ -18,7 +18,10 @@ export default function Writing() {
             <ArticleCard key={a.title} index={i + 1} article={a} />
           ))}
         </div>
-        <p className="mt-8 font-mono text-xs text-neutral-600">// more notes from the workbench, soon.</p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a href="#contact" className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300">Let&apos;s Talk</a>
+          <a href="/files/MCMCRESUME.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-neutral-700 px-5 py-3 text-sm font-semibold text-white transition hover:border-neutral-400 hover:bg-white/5">View CV</a>
+        </div>
       </Reveal>
     </section>
   );

@@ -6,7 +6,7 @@ import Reveal from '../components/Reveal.jsx';
 export default function Projects() {
   return (
     <section id="projects" className="border-t border-neutral-800">
-      <Reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 md:py-32">
+      <Reveal className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14 md:py-20">
         <SectionHeader
           number="03"
           label="Selected work"

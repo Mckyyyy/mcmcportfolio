@@ -4,11 +4,11 @@
 // ------------------------------------------------------------
 
 export const profile = {
-  firstName: 'MC CHIELO',
-  lastName: 'REAMBONANZA.',
+  firstName: 'Mc Chielo',
+  lastName: 'Reambonanza',
   logo: 'mc_',
-  role: 'Web developer',
-  bio: 'I build responsive websites and web apps with clear, user-friendly interfaces.',
+  role: 'Graphic Designer & Web Developer',
+  bio: 'I build responsive websites and web apps with clear, user-friendly interfaces. I also edit posters, create design materials, and craft visuals that make brands and content stand out.',
   email: 'besasmcmc@gmail.com',
   resume: '/files/MCMCRESUME.pdf',
   heroImage: '/images/mcmc.png',
@@ -18,10 +18,10 @@ export const profile = {
 
 export const navLinks = [
   { id: 'intro', label: 'Intro' },
-  { id: 'writing', label: 'Writing' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'speaking', label: 'Speaking' },
+  { id: 'approach', label: 'Services' },
   { id: 'about', label: 'About' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'writing', label: 'Notes' },
 ];
 
 export const socials = [
@@ -32,19 +32,28 @@ export const socials = [
   // { label: 'GitHub', href: 'https://github.com/your-username' },
 ];
 
-export const currentlyInto = ['UI design', 'Web development'];
+export const currentlyInto = ['Web Development', 'Graphic Design', 'Poster Design', 'Social Media Design'];
+
+export const highlights = [
+  'Responsive websites',
+  'User-friendly interfaces',
+  'Poster editing',
+  'Social media creatives',
+  'Tarpaulin design',
+];
 
 export const toolkit = [
   'HTML5',
   'CSS3',
   'JavaScript',
   'React',
-  'Material UI',
   'Tailwind CSS',
   'PHP',
   'MySQL',
   'Git',
   'Figma',
+  'Canva',
+  'Photoshop',
 ];
 
 // TODO: replace with your real articles / notes.
@@ -136,15 +145,23 @@ export const projects = [
 
 export const services = [
   {
-    title: 'Web Development',
-    body: 'Responsive, accessible websites that are easy to maintain.',
+    title: 'Web Developer',
+    body: 'Build responsive, functional websites and web apps for modern digital needs.',
   },
   {
-    title: 'Graphic Design',
-    body: 'Clear brand visuals, from social graphics to page layouts.',
+    title: 'Graphics Design',
+    body: 'Create clear, polished visuals that support brands, content, and communication.',
   },
   {
-    title: 'Full-stack Builds',
-    body: 'Web apps built from database to interface.',
+    title: 'Poster Design',
+    body: 'Design promotional posters and announcements with strong visual focus and impact.',
+  },
+  {
+    title: 'Social Media Design',
+    body: 'Create engaging post creatives, banners, and campaign graphics for online platforms.',
+  },
+  {
+    title: 'Tarpaulin Designer',
+    body: 'Craft large-format prints and signage with clean layouts and readable messaging.',
   },
 ];

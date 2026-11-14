@@ -1,72 +1,38 @@
-import { toolkit, profile } from '../data.js';
+import { toolkit, services } from '../data.js';
 import SectionHeader from '../components/SectionHeader.jsx';
 import TechBadge from '../components/TechBadge.jsx';
-import ArrowLink from '../components/ArrowLink.jsx';
 import Reveal from '../components/Reveal.jsx';
-
-function CodeBlock() {
-  return (
-    <div className="overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-950">
-      <div className="flex items-center gap-2 border-b border-neutral-800 px-4 py-3">
-        <span className="h-2.5 w-2.5 rounded-full bg-neutral-700" />
-        <span className="h-2.5 w-2.5 rounded-full bg-neutral-700" />
-        <span className="h-2.5 w-2.5 rounded-full bg-neutral-700" />
-        <span className="ml-3 font-mono text-[11px] text-neutral-600">approach.js</span>
-      </div>
-      <pre className="overflow-x-auto p-5 font-mono text-sm leading-7">
-        <code>
-          <span className="text-neutral-600">// the short version</span>
-          {'\n'}
-          <span className="text-sky-300">while</span> <span className="text-neutral-300">(</span>
-          <span className="text-amber-200">curious</span>
-          <span className="text-neutral-300">) {'{'}</span>
-          {'\n  '}
-          <span className="text-emerald-300">learn</span>
-          <span className="text-neutral-300">();</span>
-          {'\n  '}
-          <span className="text-emerald-300">build</span>
-          <span className="text-neutral-300">();</span>
-          {'\n  '}
-          <span className="text-emerald-300">share</span>
-          <span className="text-neutral-300">();</span>
-          {'\n'}
-          <span className="text-neutral-300">{'}'}</span>
-          <span className="cursor-blink text-emerald-400">▍</span>
-        </code>
-      </pre>
-    </div>
-  );
-}
 
 export default function Approach() {
   return (
     <section id="approach" className="border-t border-neutral-800">
-      <Reveal className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 md:py-32">
-        <SectionHeader number="01" label="How I work" title="Build. Learn. Share." />
+      <Reveal className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14 md:py-20">
+        <SectionHeader number="01" label="Services & Skills" title="Graphic Designer and Web Developer" />
 
-        <div className="grid gap-12 lg:grid-cols-12">
-          <div className="space-y-6 text-lg leading-relaxed lg:col-span-6">
-            <p>
-              I focus on clear layouts, fast pages, and interfaces that make sense. Building and sharing projects is how I learn.
-            </p>
-            <div className="flex flex-wrap gap-6 pt-2">
-              <ArrowLink href="#about">About me</ArrowLink>
-              <ArrowLink href={profile.resume} external>
-                View my CV
-              </ArrowLink>
-            </div>
-          </div>
-          <div className="lg:col-span-6">
-            <CodeBlock />
-          </div>
+        <div className="mb-10 grid gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+          {services.map((service, index) => (
+            <article
+              key={service.title}
+              className="group relative overflow-hidden rounded-2xl border border-neutral-800 bg-gradient-to-br from-neutral-950 via-neutral-900 to-slate-950 p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-[0_16px_40px_rgba(16,185,129,0.12)]"
+            >
+              <div
+                className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-400/80 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-700 bg-neutral-800/80 font-mono text-sm font-semibold text-emerald-300">
+                {String(index + 1).padStart(2, '0')}
+              </div>
+              <h3 className="mb-3 text-lg font-semibold text-white">{service.title}</h3>
+              <p className="text-sm leading-relaxed text-neutral-300">{service.body}</p>
+            </article>
+          ))}
         </div>
 
-        <div className="mt-16 border-t border-neutral-800 pt-10">
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Tools I use</p>
-          <ul className="flex flex-wrap gap-2.5">
+        <div className="border-t border-neutral-800 pt-8">
+          <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Tools I use</p>
+          <ul className="grid gap-3 grid-cols-3">
             {toolkit.map((t) => (
-              <li key={t}>
-                <TechBadge>{t}</TechBadge>
+              <li key={t} className="flex">
+                <TechBadge size="lg" className="w-full justify-center">{t}</TechBadge>
               </li>
             ))}
           </ul>

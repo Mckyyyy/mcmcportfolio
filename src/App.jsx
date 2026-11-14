@@ -4,7 +4,6 @@ import Hero from './sections/Hero.jsx';
 import Approach from './sections/Approach.jsx';
 import Writing from './sections/Writing.jsx';
 import Projects from './sections/Projects.jsx';
-import Speaking from './sections/Speaking.jsx';
 import About from './sections/About.jsx';
 import Footer from './sections/Footer.jsx';
 import PdfViewer from './components/PdfViewer.jsx';
@@ -33,10 +32,9 @@ export default function App() {
       <main id="main-content">
         <Hero />
         <Approach />
-        <Writing />
-        <Projects />
-        <Speaking />
         <About />
+        <Projects />
+        <Writing />
       </main>
       <Footer />
       <ScrollTopButton />
