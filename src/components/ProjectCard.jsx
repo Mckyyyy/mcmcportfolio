@@ -1,7 +1,7 @@
 import TechBadge from './TechBadge.jsx';
 import ProjectIcon from './ProjectIcon.jsx';
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, index }) {
   const { name, category, description, tags, repository, icon, featured, private: isPrivate } = project;
 
   return (
@@ -12,9 +12,16 @@ export default function ProjectCard({ project }) {
           : 'border-neutral-800 hover:border-neutral-600'
       }`}
     >
+      <div
+        aria-hidden="true"
+        className="relative flex aspect-[16/8] items-center justify-center overflow-hidden border-b border-neutral-800 bg-[radial-gradient(ellipse_at_center,rgba(16,185,129,0.12),transparent_65%),linear-gradient(135deg,#393244,#1b1924)]"
+      >
+        <span className="absolute right-4 top-3 font-mono text-xs text-neutral-500">{String(index).padStart(2, '0')}</span>
+        <ProjectIcon kind={icon} featured={featured} size="lg" />
+      </div>
+
       <div className="flex flex-1 flex-col p-5 sm:p-6">
         <div className="mb-4 flex items-center justify-between gap-3">
-          <ProjectIcon kind={icon} featured={featured} />
           {featured && (
             <span className="rounded-full border border-emerald-500/30 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-emerald-300">
               Featured
@@ -24,6 +31,7 @@ export default function ProjectCard({ project }) {
 
         <p className="mb-2 font-mono text-[10px] uppercase tracking-wider text-neutral-500">{category}</p>
         <h3 className="mb-3 text-lg font-semibold leading-snug tracking-tight text-white sm:text-xl">{name}</h3>
+        <p className="mb-1 font-mono text-[10px] uppercase tracking-wider text-neutral-500">Project focus</p>
         <p className="mb-5 text-sm leading-relaxed">{description}</p>
 
         {tags.length > 0 && (
@@ -50,7 +58,7 @@ export default function ProjectCard({ project }) {
               className="inline-flex items-center gap-2 rounded-full border border-neutral-700 px-3.5 py-2 font-mono text-xs text-neutral-200 transition-colors hover:border-emerald-400/60 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
               aria-label={`View ${name} project on GitHub (opens in a new tab)`}
             >
-              View Project
+              View source code
               <span aria-hidden="true">↗</span>
             </a>
           )}

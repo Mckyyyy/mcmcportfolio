@@ -3,6 +3,15 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --color-slate-950: #1c1b27;
+  --color-neutral-950: #13121b;
+  --color-neutral-900: #211f2c;
+  --color-neutral-800: #3a3748;
+  --color-neutral-700: #545064;
+  --color-neutral-600: #777386;
+  --color-neutral-500: #9a96a5;
+  --color-neutral-400: #c1bdc8;
+  --color-neutral-300: #dad7df;
 }
 
 html {
@@ -11,7 +20,7 @@ html {
 
 body {
   overflow-x: clip;
-  @apply bg-slate-950 text-neutral-400 font-sans antialiased;
+  @apply bg-slate-950 text-neutral-300 font-sans antialiased;
 }
 
 ::selection {

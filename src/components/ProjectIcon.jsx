@@ -52,17 +52,22 @@ function ProjectArtwork({ kind }) {
   }
 }
 
-export default function ProjectIcon({ kind, featured = false }) {
+export default function ProjectIcon({ kind, featured = false, size = 'md' }) {
+  const sizeClasses = size === 'lg'
+    ? 'h-16 w-16 rounded-2xl'
+    : 'h-11 w-11 rounded-xl';
+  const iconSizeClass = size === 'lg' ? 'h-8 w-8' : 'h-5 w-5';
+
   return (
     <span
       aria-hidden="true"
-      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border ${
+      className={`flex shrink-0 items-center justify-center border ${sizeClasses} ${
         featured ? 'border-emerald-500/30 bg-emerald-500/10' : 'border-neutral-800 bg-neutral-900'
       }`}
     >
       <svg
         viewBox="0 0 24 24"
-        className={`h-5 w-5 ${featured ? 'stroke-emerald-300' : 'stroke-neutral-400'}`}
+        className={`${iconSizeClass} ${featured ? 'stroke-emerald-300' : 'stroke-neutral-400'}`}
         fill="none"
         stroke="currentColor"
         strokeWidth="1.25"

@@ -1,10 +1,10 @@
 import TechBadge from './TechBadge.jsx';
 
 export default function ArticleCard({ index, article }) {
-  const { tags, title, excerpt, date, readTime, href } = article;
+  const { tags, title, excerpt, meta, href } = article;
   return (
     <article className="group border-t border-neutral-800 transition-colors last:border-b hover:bg-white/[0.02]">
-      <a href={href} className="grid gap-4 py-8 md:grid-cols-12 md:gap-8 md:px-4">
+      <a href={href} target="_blank" rel="noopener noreferrer" className="grid gap-4 py-6 md:grid-cols-12 md:gap-8 md:px-4">
         <span className="font-mono text-sm text-neutral-600 transition-colors group-hover:text-emerald-400 md:col-span-1">
           {String(index).padStart(2, '0')}
         </span>
@@ -23,10 +23,10 @@ export default function ArticleCard({ index, article }) {
           <p className="max-w-2xl leading-relaxed">{excerpt}</p>
         </div>
 
-        <div className="flex items-start justify-between gap-4 font-mono text-xs text-neutral-500 md:col-span-3 md:flex-col md:items-end">
-          <time>{date}</time>
+        <div className="flex items-center justify-between gap-4 font-mono text-xs text-neutral-500 md:col-span-3 md:flex-col md:items-end">
+          <span>{meta}</span>
           <span className="flex items-center gap-2">
-            {readTime}
+            View project
             <span
               aria-hidden="true"
               className="text-neutral-400 transition-transform group-hover:translate-x-1 group-hover:text-white"

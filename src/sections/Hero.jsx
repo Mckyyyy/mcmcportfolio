@@ -1,7 +1,6 @@
 import { profile, currentlyInto } from '../data.js';
 import Button from '../components/Button.jsx';
 import TechBadge from '../components/TechBadge.jsx';
-import TypedName from '../components/TypedName.jsx';
 
 export default function Hero() {
   return (
@@ -15,22 +14,24 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-4 pb-8 pt-6 sm:px-6 sm:pb-10 sm:pt-8 md:pt-12 lg:grid-cols-12 lg:gap-8 lg:pb-14">
         {/* Left: copy */}
         <div className="@container min-w-0 lg:col-span-7">
-          <p className="mb-3 font-mono text-sm text-neutral-400">Hello There, I&apos;m</p>
+          <p className="mb-4 font-mono text-sm italic text-neutral-300">
+            Hello there, I&apos;m {profile.firstName} {profile.lastName}
+          </p>
 
-          {/* Sized to the column width (cqw) so the full name always fits beside the photo */}
-          <h1 className="mb-6 sm:mb-8 text-[clamp(2rem,11cqw,6rem)] font-black leading-[0.9] tracking-tight text-white">
-            <span className="sr-only">{`${profile.firstName} ${profile.lastName}`}</span>
-            <TypedName first={profile.firstName} last={profile.lastName} />
+          <h1 aria-label={profile.role} className="mb-6 max-w-4xl text-[clamp(2.3rem,6vw,4.25rem)] font-black uppercase leading-[0.9] tracking-[-0.06em] text-[#ead6d6]">
+            <span className="block">Graphic Designer</span>
+            <span className="block text-[#d3b9bc]">&amp; Web Developer</span>
           </h1>
 
-          <p className="mb-2 text-lg font-bold uppercase tracking-[0.15em] text-emerald-300 sm:text-xl">Graphic Designer and Web Developer</p>
-          <p className="mb-6 max-w-xl text-base leading-relaxed sm:mb-8 sm:text-lg">{profile.bio}</p>
+          <div className="mb-6 h-px w-full max-w-[32rem] bg-[#d3b9bc]/60" />
+          <p className="mb-5 max-w-xl text-base leading-relaxed sm:text-lg">{profile.bio}</p>
+          <p className="mb-7 font-mono text-xs leading-relaxed text-neutral-400 sm:text-sm">
+            {profile.location} · {profile.timeZone}
+          </p>
 
-          <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap">
-            <Button href="#projects">Explore my work →</Button>
-            <Button href="#writing" variant="ghost">
-              Read writing
-            </Button>
+          <div className="flex flex-wrap gap-3">
+            <Button href="#projects">View my work <span aria-hidden="true">↘</span></Button>
+            <Button href="#contact" variant="ghost">Let&apos;s talk</Button>
           </div>
         </div>
 

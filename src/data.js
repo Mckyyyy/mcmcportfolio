@@ -8,12 +8,14 @@ export const profile = {
   lastName: 'Reambonanza',
   logo: 'mc_',
   role: 'Graphic Designer & Web Developer',
-  bio: 'I build responsive websites and web apps with clear, user-friendly interfaces. I also edit posters, create design materials, and craft visuals that make brands and content stand out.',
+  bio: 'I help turn ideas into responsive websites, practical web apps, and engaging visuals—from posters and social media graphics to print-ready tarpaulins.',
   email: 'besasmcmc@gmail.com',
   resume: '/files/MCMCRESUME.pdf',
   heroImage: '/images/mcmc.png',
   aboutImage: '/images/mcmc3.png',
-  status: 'Open for opportunities',
+  location: 'Siargao Island, Philippines',
+  timeZone: 'UTC+8',
+  status: 'Available for projects',
 };
 
 export const navLinks = [
@@ -22,9 +24,11 @@ export const navLinks = [
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
   { id: 'writing', label: 'Notes' },
+  { id: 'contact', label: 'Contact' },
 ];
 
 export const socials = [
+  { label: 'Messenger', href: 'https://m.me/besasmcmc12' },
   { label: 'Facebook', href: 'https://www.facebook.com/besasmcmc12' },
   { label: 'Instagram', href: 'https://www.instagram.com/mckyyyyyyy_/' },
   { label: 'Email', href: 'mailto:besasmcmc@gmail.com' },
@@ -56,31 +60,27 @@ export const toolkit = [
   'Photoshop',
 ];
 
-// TODO: replace with your real articles / notes.
 export const articles = [
   {
-    tags: ['CSS', 'Layout'],
-    title: 'Responsive layouts without the headache',
-    excerpt: 'Use Flexbox for one-dimensional layouts and Grid for two. Start mobile-first, then adapt to larger screens.',
-    date: 'Oct 28, 2026',
-    readTime: '5 min read',
-    href: '#',
+    tags: ['PHP', 'MySQL'],
+    title: 'Streamlining academic document requests',
+    excerpt: 'The NEMCO thesis project focuses on making registrar document requests easier to manage.',
+    meta: 'Thesis project',
+    href: 'https://github.com/Mckyyyy/ODRS-NEMCO',
   },
   {
-    tags: ['React', 'Learning'],
-    title: 'What moving from HTML to React taught me',
-    excerpt: 'Rebuilding an old project made components, props, and state click—and showed me how to think in reusable pieces.',
-    date: 'Oct 09, 2026',
-    readTime: '7 min read',
-    href: '#',
+    tags: ['PHP', 'MySQL', 'JavaScript'],
+    title: 'Organizing campus concerns in one system',
+    excerpt: 'A team thesis project for a local client, built to support campus concern management.',
+    meta: 'Collaborative thesis',
+    href: 'https://github.com/Mckyyyy/snsu-icms',
   },
   {
-    tags: ['PHP', 'Backend'],
-    title: 'Sending email from a contact form, safely',
-    excerpt: 'Validate input and keep credentials out of source code—even for small projects.',
-    date: 'Sep 15, 2026',
-    readTime: '6 min read',
-    href: '#',
+    tags: ['React', 'Express.js', 'Node.js', 'MySQL'],
+    title: 'Rebuilding a raffle tool as a full-stack app',
+    excerpt: 'A modern rebuild of an earlier workplace raffle system, with a React frontend and Express backend.',
+    meta: 'Workplace · Full-stack',
+    href: 'https://github.com/Mckyyyy/Raffle-Draw-System',
   },
 ];
 
